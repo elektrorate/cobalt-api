@@ -1,0 +1,4 @@
+FROM ghcr.io/imputnet/cobalt:11
+
+ENV API_PORT=9000
+ENV CORS_WILDCARD=1

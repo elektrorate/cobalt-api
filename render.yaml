@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: cobalt-api
+    runtime: image
+    image:
+      url: ghcr.io/imputnet/cobalt:11
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: API_URL
+        sync: false
+        value: ""
+      - key: API_PORT
+        value: "9000"
+      - key: CORS_WILDCARD
+        value: "1"
+      - key: RATELIMIT_MAX
+        value: "30"
+      - key: DURATION_LIMIT
+        value: "10800"
+      - key: API_AUTH_REQUIRED
+        value: "0"
